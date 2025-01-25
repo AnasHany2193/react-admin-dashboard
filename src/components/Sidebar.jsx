@@ -12,9 +12,13 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 const Sidebar = () => {
   const location = useLocation();
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   const isActive = (link) => location.pathname === `/${link}`;
+
+  const handleCloseSidebar = () => {
+    if (activeMenu && screenSize <= 900) setActiveMenu(false);
+  };
 
   return (
     <div className="h-screen pb-10 ml-3 overflow-auto md:overflow-hidden md:hover:overflow-auto">
@@ -24,14 +28,14 @@ const Sidebar = () => {
             {/* Logo */}
             <Link
               to="/"
-              onClick={() => setActiveMenu(false)}
+              onClick={handleCloseSidebar}
               className="flex items-center gap-3 mt-4 ml-3 text-xl font-extrabold tracking-tight dark:text-white text-slate-800"
             >
               <SiShopware /> <span>Shoppy</span>
             </Link>
 
             {/* Sidebar Close Button */}
-            <TooltipComponent content="Menu" position="BottomCenter">
+            <TooltipComponent content="Close Menu" position="BottomCenter">
               <button
                 type="button"
                 onClick={() => setActiveMenu((active) => !active)}
@@ -42,6 +46,7 @@ const Sidebar = () => {
             </TooltipComponent>
           </div>
 
+          {/* Sidebar Links */}
           <div className="mt-10">
             {links.map((item) => (
               <div key={item.title}>
@@ -50,7 +55,7 @@ const Sidebar = () => {
                   <NavLink
                     key={link.name}
                     to={link.name}
-                    onClick={() => {}}
+                    onClick={handleCloseSidebar}
                     className={`flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-base m-2 ${
                       isActive(link.name)
                         ? "text-white bg-gray-700"

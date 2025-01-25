@@ -13,6 +13,11 @@
   }
 }
 
+/* In your global styles file (styles.css) */
+.transition-all-custom {
+  @apply transition-all duration-300 ease-in-out;
+}
+
 .e-dlg-center-center,
 .e-quick-popup-wrapper.e-device {
   z-index: 1000000 !important;
