@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Link, NavLink, useLocation } from "react-router-dom";
 
@@ -8,10 +8,12 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { links } from "../data/dummy";
 
+import { useStateContext } from "../contexts/ContextProvider";
+
 const Sidebar = () => {
   const location = useLocation();
+  const { activeMenu, setActiveMenu } = useStateContext();
 
-  const activeMenu = true;
   const isActive = (link) => location.pathname === `/${link}`;
 
   return (
@@ -22,8 +24,8 @@ const Sidebar = () => {
             {/* Logo */}
             <Link
               to="/"
-              onClick={() => {}}
-              className="flex items-center w-full gap-3 mt-4 ml-3 text-xl font-extrabold tracking-tight dark:text-white text-slate-800"
+              onClick={() => setActiveMenu(false)}
+              className="flex items-center gap-3 mt-4 ml-3 text-xl font-extrabold tracking-tight dark:text-white text-slate-800"
             >
               <SiShopware /> <span>Shoppy</span>
             </Link>
@@ -31,9 +33,9 @@ const Sidebar = () => {
             {/* Sidebar Close Button */}
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
-                className="block p-3 mt-4 text-xl rounded-full hover:bg-light-gray md:hidden"
                 type="button"
-                onClick={() => {}}
+                onClick={() => setActiveMenu((active) => !active)}
+                className="block p-3 mt-4 text-xl rounded-full hover:bg-light-gray md:hidden"
               >
                 <MdOutlineCancel />
               </button>
