@@ -63,7 +63,7 @@ const App = () => {
               activeMenu ? "ml-60" : "ml-0" // Adjust margin based on sidebar state
             }`}
           >
-            <div className="w-full  md:static bg-main-bg dark:bg-main-dark-bg navbar">
+            <div className="w-full md:static bg-main-bg dark:bg-main-dark-bg navbar">
               <Navbar />
             </div>
 
