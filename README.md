@@ -13,7 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 01:54:44 Revenue Section -> Done
 02:17:36 Data Tables -> Done
 02:36:10 Calendar -> Done
-02:44:02 Kanban
+02:44:02 Kanban -> Done
 02:49:21 WYSWYG Editor
 02:53:49 Color Picker
 02:59:13 Theme Fixes

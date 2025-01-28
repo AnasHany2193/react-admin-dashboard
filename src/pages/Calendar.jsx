@@ -1,10 +1,7 @@
 import React from "react";
 
-import { DatePickerComponent } from "@syncfusion/ej2-react-calendars";
 import {
   ScheduleComponent,
-  ViewsDirective,
-  ViewDirective,
   Day,
   Week,
   WorkWeek,
