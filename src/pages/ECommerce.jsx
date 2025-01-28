@@ -5,8 +5,10 @@ import { GoDotFill } from "react-icons/go";
 import Hero from "../data/hero-pattern.png";
 import { Button, Stacked, SparkLine } from "../components";
 import { earningData, SparklineAreaData } from "../data/dummy";
+import { useStateContext } from "../contexts/ContextProvider";
 
 const ECommerce = () => {
+  const { currentColor } = useStateContext();
   const [key, setKey] = useState(0);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ const ECommerce = () => {
             <div>
               <Button
                 color="white"
-                bgColor="blue"
+                bgColor={currentColor}
                 text="Download"
                 borderRadius="10px"
                 size="base"
@@ -152,15 +154,15 @@ const ECommerce = () => {
                   height="80px"
                   width="100%" // Let it adjust to container
                   data={SparklineAreaData}
-                  color="blue"
-                  currentColor="blue"
+                  color={currentColor}
+                  currentColor={currentColor}
                 />
               </div>
 
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor="blue"
+                  bgColor={currentColor}
                   text="Download Report"
                   borderRadius="10px"
                 />

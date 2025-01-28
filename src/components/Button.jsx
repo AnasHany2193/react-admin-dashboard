@@ -1,6 +1,7 @@
 import React from "react";
 
 const Button = ({ color, bgColor, size, text, borderRadius }) => {
+  console.log("bgColor", bgColor);
   return (
     <button
       type="button"

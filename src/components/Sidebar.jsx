@@ -12,7 +12,8 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 const Sidebar = () => {
   const location = useLocation();
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } =
+    useStateContext();
 
   const isActive = (link) => location.pathname === `/${link}`;
 
@@ -56,6 +57,9 @@ const Sidebar = () => {
                     key={link.name}
                     to={link.name}
                     onClick={handleCloseSidebar}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : "",
+                    })}
                     className={`flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-base m-2 ${
                       isActive(link.name)
                         ? "text-white bg-gray-700"
