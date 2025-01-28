@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "./../components/Header";
-import { contextMenuItems, ordersData, ordersGrid } from "./../data/dummy";
+import { ordersData, ordersGrid } from "./../data/dummy";
 
 import {
   GridComponent,

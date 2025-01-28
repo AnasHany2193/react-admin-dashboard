@@ -7,11 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 00:00:00 Intro -> Done
 00:08:16 Setup -> Done
 00:51:38 Sidebar -> Done
-
-01:06:21 Context API
-01:15:25 Navbar
-01:39:45 Homepage
-01:54:44 Revenue Section
+01:06:21 Context API -> Done
+01:15:25 Navbar -> Done
+01:39:45 Homepage -> Done
+01:54:44 Revenue Section -> Done
 02:17:36 Data Tables
 02:36:10 Calendar
 02:44:02 Kanban
