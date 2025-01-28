@@ -17,8 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 02:49:21 Editor -> Done
 02:53:49 Color Picker -> Done
 02:59:13 Theme Fixes -> Done
-03:33:10 Charts
-03:51:18 Deployment
+03:33:10 Charts -> Done
 
 ## Available Scripts
 

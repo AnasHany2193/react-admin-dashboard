@@ -30,6 +30,9 @@ const SparkLine = ({ id, height, width, type, data, color, currentColor }) => {
         // eslint-disable-next-line no-template-curly-in-string
         format: "${x} : data ${yval}",
         trackLineSettings: { visible: true },
+        textStyle: {
+          color: currentColor, // Tooltip text color
+        },
       }}
     >
       <Inject services={[SparklineTooltip]} />

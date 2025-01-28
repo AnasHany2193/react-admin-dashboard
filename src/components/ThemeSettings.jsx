@@ -13,7 +13,7 @@ const ThemeSettings = () => {
 
   return (
     <div className="fixed top-0 right-0 w-screen bg-half-transparent nav-item">
-      <div className="flex flex-col gap-3 p-4 ml-4 float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-60">
+      <div className="flex flex-col gap-3 p-4 ml-4 float-right h-screen dark:text-gray-200 dark:bg-main-dark-bg bg-white dark:[#484B52] w-60">
         {/* Title and Close Button */}
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">Settings</p>

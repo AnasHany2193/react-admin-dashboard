@@ -47,7 +47,7 @@ const ECommerce = () => {
           <img
             src={Hero}
             alt="hero-pattern"
-            className="object-cover overflow-hidden rounded-r-xl"
+            className="object-cover overflow-hidden rounded-xl"
           />
         </div>
       </div>
