@@ -7,14 +7,9 @@ import {
   GridComponent,
   ColumnDirective,
   ColumnsDirective,
-  Resize,
   Sort,
   Filter,
-  ContextMenu,
   Page,
-  ExcelExport,
-  PdfExport,
-  Edit,
   Inject,
 } from "@syncfusion/ej2-react-grids";
 
@@ -28,18 +23,7 @@ const Orders = () => {
             <ColumnDirective key={i} {...order}></ColumnDirective>
           ))}
         </ColumnsDirective>
-        <Inject
-          services={[
-            Resize,
-            Sort,
-            Page,
-            ContextMenu,
-            Filter,
-            ExcelExport,
-            Edit,
-            PdfExport,
-          ]}
-        />
+        <Inject services={[Sort, Page, Filter]} />
       </GridComponent>
     </div>
   );
