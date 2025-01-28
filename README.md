@@ -11,8 +11,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 01:15:25 Navbar -> Done
 01:39:45 Homepage -> Done
 01:54:44 Revenue Section -> Done
-02:17:36 Data Tables
-02:36:10 Calendar
+02:17:36 Data Tables -> Done
+02:36:10 Calendar -> Done
 02:44:02 Kanban
 02:49:21 WYSWYG Editor
 02:53:49 Color Picker
